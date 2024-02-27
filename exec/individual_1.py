@@ -20,7 +20,8 @@ if __name__ == "__main__":
 
     with open("individual_1.txt", "r", encoding="utf-8") as file:
         sentences = file.readlines()
-        for sentence in sentences:
-            for digit, word in words.items():
-                sentence = sentence.replace(digit, word)
-            print(sentence)
+        
+    for sentence in sentences:
+        for digit, word in words.items():
+            sentence = sentence.replace(digit, word)
+        print(sentence)
