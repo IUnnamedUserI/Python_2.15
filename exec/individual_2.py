@@ -12,16 +12,12 @@ if __name__ == "__main__":
     else:
         with open("individual_2.txt", "r", encoding="utf-8") as file:
             strings = file.readlines()
+        
         prev_word = None
-        words_seen = {}
         for idx, line in enumerate(strings):
             words = line.strip().split()
             for word in words:
                 if (prev_word == word):
-                    print(f"В строке {idx} слово '{word}' повторяется дважды")
-                elif word in words_seen:
-                    if idx != words_seen[word]:
-                        print(f"В строке {idx} слово '{word}' повторяется"
-                                " на строке {words_seen[word]}")
+                    print(f"В строке {idx + 1} слово '{word}' повторяется дважды")
                 prev_word = word
     

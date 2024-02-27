@@ -4,6 +4,7 @@
 import os
 
 if __name__ == "__main__":
+    new_sentence = ""
     words = {
         '0': 'Ноль',
         '1': 'Один',
@@ -25,3 +26,7 @@ if __name__ == "__main__":
         for digit, word in words.items():
             sentence = sentence.replace(digit, word)
         print(sentence)
+        new_sentence += sentence + "\n"
+
+    with open("individual_1.2.txt", "a", encoding="utf-8") as file:
+        file.write(new_sentence)
